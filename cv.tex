@@ -1,0 +1,91 @@
+% Copyright 2015 by Schmidiger, Kevin
+% !TEX program = pdflatex
+
+\documentclass[11pt,legalpaper,sans]{moderncv}   
+% ('10pt', '11pt' and '12pt'), ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' or 'landscape') , ('sans' or 'roman')
+
+% ModernCV Themes
+\moderncvstyle{banking}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
+\moderncvcolor{blue}                          % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
+%\nopagenumbers{}
+
+% ajustes para los margenes de pagina
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}
+
+\usepackage[utf8]{inputenc}					% Added so I can use special letters like an "Ö"
+\usepackage{german}
+
+% Personal data
+\name{Kevin}{Schmidiger}
+\title{Lebenslauf}
+\address{Riedhofstrasse 370, 8049 Z"urich}
+\phone[mobile]{+41 79 269 82 25}
+\phone[fixed]{+41 44 341 98 27}
+%\phone[fax]{+3~(456)~789~012}
+\email{schmidiger.kevin@hotmail.com}
+\homepage{www.kevinschmidiger.me}
+%\extrainfo{informacion adicional}
+\photo[64pt][0.4pt]{picture}
+\quote{Die aktuelle Version meines Lebenslauf auf \href{https://github.com/kschmidi/cv}{\textbf{Github}}}
+\social[github]{kschmidi}
+
+% New command "makecvtitle" (needed to add image on top of title)
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}
+  \oldmakecvtitle
+}
+}{
+}
+\makeatother
+
+\begin{document}
+
+\makecvtitle
+
+\section{Ausbildung}
+\cventry{2013--heute}{\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}{Bachelor of Science FHO in Computer Science}{Rapperswil}{\textit{Note: -}}{Vollzeit (voraussichtlich)}
+\cventry{2012--2013}{\href{http://www.bbw.ch/}{BBW Berufsbildungsschule Winterthur}}{Berufsmaturit"at (Technische Richtung)}{Winterthur}{\textit{Note: 4.8}}{Vollzeit}
+\cventry{2007--2011}{\href{htttp://www.tbz.ch/}{TBZ Technische Berufsschule Z"urich}}{Berufslehre Elektroinstallateur}{Z"urich}{\textit{Note: 5.0}}{EFZ}
+
+\section{Erfahrungen}
+\cventry{2015}{\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}{Coach an der \href{http://appquest.hsr.ch/}{\textbf{AppQuest}} 2015}{Rapperswil}{}{Betreuung von Teams w"ahrend 12 Wochen}
+
+\section{Technologien}
+\cvitemwithcomment{Programmiersprachen}{Java, C++11, Bash}{}
+\cvitemwithcomment{Web}{Html, CSS, Bootstrap, Play, JavaScript}{auch JSF, AngularJS, NodeJS}
+\cvitemwithcomment{Projektautomatisation}{Jenkins, Git}{auch Gradle und Maven}
+\cvitemwithcomment{Datenbanken}{Postgres}{auch Oracle}
+\cvitemwithcomment{Betriebsysteme}{Linux, MacOS, Windows}{auch Android und iOS}
+\cvitemwithcomment{Sonstiges}{\href{http://www.org/}{ANTLR}, \href{http://www.latex-project.org/}{\LaTeX}}{\href{http://www.latex-project.org/}{\LaTeX\space f"ur Dokumentationen oder Arbeiten}}
+
+\section{Sprachkentnisse}
+\cvitemwithcomment{Deutsch}{Sehr gutes Niveau in Wort und Schrift}{Muttersprache}
+\cvitemwithcomment{Englisch}{Gutes Niveau in Wort und Schrift}{Niveau zwischen B2 und C1}
+\cvitemwithcomment{Franz"osisch}{Normale Schulkenntnisse}{Schulkenntnisse}
+
+\section{Hobbies \& Interessen}
+\cvitem{Hobbies}{Lesen}
+\cvitem{Intressen}{Eishockey, Programmiersprachen}
+
+
+% Las publicaciones tomadas de un archivo de BibTeX sin usar multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                   % 'publications' es el nombre del archivo BibTeX
+
+% Las publicaciones tomadas de un archivo BibTeX usando el paquete multibib
+%\section{Publicaciones}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' es el nombre del archivo BibTeX
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' es el nombre del archivo BibTeX
+
+%\clearpage\end{CJK*}                          % si esta redactando su CV en chino usando CJK, \clearpage es requerido por fancyhdr para que funcione correctamente con CJK, aunque esto eliminara la numeracion de pagina al dejar \lastpage como no definido
+\end{document}
