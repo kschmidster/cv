@@ -1,11 +1,12 @@
-% Copyright 2015 by Schmidiger, Kevin
+% Copyright 2015 by Kevin Schmidiger
+% mix of classic and bank style of https://www.sharelatex.com/templates/cv-or-resume
 % !TEX program = pdflatex
 
 \documentclass[11pt,legalpaper,sans]{moderncv}   
 % ('10pt', '11pt' and '12pt'), ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' or 'landscape') , ('sans' or 'roman')
 
 % ModernCV Themes
-\moderncvstyle{banking}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
+\moderncvstyle{myclassic}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
 \moderncvcolor{blue}                          % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
 %\nopagenumbers{}
 
@@ -27,65 +28,96 @@
 \homepage{www.kevinschmidiger.me}
 %\extrainfo{informacion adicional}
 \photo[64pt][0.4pt]{picture}
-\quote{Die aktuelle Version meines Lebenslauf auf \href{https://github.com/kschmidi/cv}{\textbf{Github}}}
+%\quote{Die aktuelle Version meines Lebenslauf auf \href{https://github.com/kschmidi/cv}{\textbf{Github}}}
+%\quote{The only thing that interferes with my learning is my education. - Albert Einstein}
 \social[github]{kschmidi}
-
-% New command "makecvtitle" (needed to add image on top of title)
-\makeatletter
-\@ifpackageloaded{moderncvstylebanking}{
-\let\oldmakecvtitle\makecvtitle
-\renewcommand*{\makecvtitle}{
-  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}
-  \oldmakecvtitle
-}
-}{
-}
-\makeatother
 
 \begin{document}
 
 \makecvtitle
 
+% ------------------------------------------------------------------------------------------------------------
+% Section 1
+% ------------------------------------------------------------------------------------------------------------
 \section{Ausbildung}
-\cventry{2013--heute}{\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}{Bachelor of Science FHO in Computer Science}{Rapperswil}{\textit{Note: -}}{Vollzeit (voraussichtlich)}
-\cventry{2012--2013}{\href{http://www.bbw.ch/}{BBW Berufsbildungsschule Winterthur}}{Berufsmaturit"at (Technische Richtung)}{Winterthur}{\textit{Note: 4.8}}{Vollzeit}
-\cventry{2007--2011}{\href{htttp://www.tbz.ch/}{TBZ Technische Berufsschule Z"urich}}{Berufslehre Elektroinstallateur}{Z"urich}{\textit{Note: 5.0}}{EFZ}
+\cventry{2013--heute}
+{Bachelor of Science FHO in Computer Science}
+{\hfill\bfseries Rapperswil}
+{\newline{}\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+{\hfill\textit{Note: -}}
+{Vollzeit (voraussichtlich)}
 
+\cventry{2012--2013}
+{Berufsmaturit"at (Technische Richtung)}
+{\hfill\bfseries Winterthur}
+{\newline{}\href{http://www.bbw.ch/}{BBW Berufsbildungsschule Winterthur}}
+{\hfill\textit{Note: 4.8}}
+{Vollzeit}
+
+\cventry{2007--2011}
+{Berufslehre Elektroinstallateur EFZ}
+{\hfill\bfseries Z"urich}
+{\newline{}\href{htttp://www.tbz.ch/}{TBZ Technische Berufsschule Z"urich}}
+{\hfill\textit{Note: 5.0}}
+{Lehre}
+
+% ------------------------------------------------------------------------------------------------------------
+% Second 2
+% ------------------------------------------------------------------------------------------------------------
 \section{Erfahrungen}
-\cventry{2015}{\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}{Coach an der \href{http://appquest.hsr.ch/}{\textbf{AppQuest}} 2015}{Rapperswil}{}{Betreuung von Teams w"ahrend 12 Wochen}
+\cventry{Fertigstellung: Sommer 2016}
+{\href{http://sinv-56012.edu.hsr.ch/ccglator}{Bachelorarbeit -} Plug-in f"ur \href{https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md}{C++ Core Guideline unterst"uztung}}{}
+{\newline{}Einhaltung der Rules: C.ctor: Constructors, assignments, and destructors mithilfe von Codeanalyse und Refactoring}{}
+{IFS Institut f"ur Software \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
 
+\cventry{2015}
+{\href{http://sinv-56012.edu.hsr.ch/aliextor}{\textbf{Studienarbeit -}} Plug-in f"ur C++(0x) Refactoring (Alias Extraction)}{}
+{\newline{}Einarbeitung in Frameworks, Implementation von Refacoring Plug-in f"ur Alias Extraction}{}
+{IFS Institut f"ur Software \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+
+\cventry{2015}
+{Coach an der \href{http://appquest.hsr.ch/}{AppQuest} 2015}{}
+{\newline{}Betreuung von Teams w"ahrend 12 Wochen}{}
+{AppQuest \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+
+% ------------------------------------------------------------------------------------------------------------
+% Section 3
+% ------------------------------------------------------------------------------------------------------------
 \section{Technologien}
-\cvitemwithcomment{Programmiersprachen}{Java, C++11, Bash}{}
-\cvitemwithcomment{Web}{Html, CSS, Bootstrap, Play, JavaScript}{auch JSF, AngularJS, NodeJS}
-\cvitemwithcomment{Projektautomatisation}{Jenkins, Git}{auch Gradle und Maven}
-\cvitemwithcomment{Datenbanken}{Postgres}{auch Oracle}
-\cvitemwithcomment{Betriebsysteme}{Linux, MacOS, Windows}{auch Android und iOS}
-\cvitemwithcomment{Sonstiges}{\href{http://www.org/}{ANTLR}, \href{http://www.latex-project.org/}{\LaTeX}}{\href{http://www.latex-project.org/}{\LaTeX\space f"ur Dokumentationen oder Arbeiten}}
+%\subsection{Sehr gute Kenntnisse}
+\cventry{\bfseries +++}{Java, C/C++11, C\#, MacOSX, Linux, Android, Jenkins, Git, \LaTeX}
+{}{}{}{}
+%\subsection{Gute Kenntnisse}
+\cventry{\bfseries ++}{Bash, Assembler, JavaScript, SQL, iOS, HTML, CSS, Play, JSF, Maven, ANTLR, PostgreSQL}
+{}{}{}{}
+%\subsection{Grundkenntnisse}
+\cventry{\bfseries +}{Compilerbau, Swift, PHP, Haskell, Bootstrap, Spring, Windows Azure, Docker, AngularJS, Oracle, MySQL}
+{}{}{}{}
 
-\section{Sprachkentnisse}
-\cvitemwithcomment{Deutsch}{Sehr gutes Niveau in Wort und Schrift}{Muttersprache}
-\cvitemwithcomment{Englisch}{Gutes Niveau in Wort und Schrift}{Niveau zwischen B2 und C1}
-\cvitemwithcomment{Franz"osisch}{Normale Schulkenntnisse}{Schulkenntnisse}
+% ------------------------------------------------------------------------------------------------------------
+% Section 4
+% ------------------------------------------------------------------------------------------------------------
+\section{Sprachen}
+%\subsection{Sehr gute Kenntnisse}
+\cventry{\bfseries +++}{Deutsch, Englisch}
+{}{}{}{}
+%\subsection{Grundkenntnisse}
+\cventry{\bfseries +}{Franz"osisch}
+{}{}{}{}
 
-\section{Hobbies \& Interessen}
-\cvitem{Hobbies}{Lesen}
-\cvitem{Intressen}{Eishockey, Programmiersprachen}
+% ------------------------------------------------------------------------------------------------------------
+% Section 5
+% ------------------------------------------------------------------------------------------------------------
+\section{Freizeit}
+\subsection{Interessen}
+\cventry{}{Eishockey \textnormal{(NLA/NHL)}, Astronomie, \textnormal{Allg. Verst"andnis der Physik und Mathematik}, Programmiersprachen \textnormal{(Aufbau bzw. Compilerbau)}, Elektrotechnik \textnormal{(Programmierung von Hardware)}, \textnormal{Allg.} Technik}
+{}{}{}{}
+\subsection{Hobbies}
+\cventry{}{Lesen, Gitarre spielen, Sport}
+{}{}{}{}
 
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications} 
 
-% Las publicaciones tomadas de un archivo de BibTeX sin usar multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                   % 'publications' es el nombre del archivo BibTeX
-
-% Las publicaciones tomadas de un archivo BibTeX usando el paquete multibib
-%\section{Publicaciones}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}              % 'publications' es el nombre del archivo BibTeX
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}              % 'publications' es el nombre del archivo BibTeX
-
-%\clearpage\end{CJK*}                          % si esta redactando su CV en chino usando CJK, \clearpage es requerido por fancyhdr para que funcione correctamente con CJK, aunque esto eliminara la numeracion de pagina al dejar \lastpage como no definido
 \end{document}
