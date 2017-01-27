@@ -6,7 +6,8 @@
 % ('10pt', '11pt' and '12pt'), ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' or 'landscape') , ('sans' or 'roman')
 
 % ModernCV Themes
-\moderncvstyle{myclassic}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
+\usepackage{moderncvstylemyclassic}
+%\moderncvstyle{myclassic}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
 \moderncvcolor{blue}                          % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
 %\nopagenumbers{}
 
@@ -17,6 +18,9 @@
 \usepackage[utf8]{inputenc}					% Added so I can use special letters like an "Ö"
 \usepackage{german}
 
+\setlength{\headheight}{0pt}
+\setlength{\textheight}{850pt}
+
 % Personal data
 \name{Kevin}{Schmidiger}
 \title{Lebenslauf}
@@ -25,7 +29,6 @@
 %\phone[fixed]{+41 44 341 98 27}
 %\phone[fax]{+3~(456)~789~012}
 \email{schmidiger.kevin@hotmail.com}
-\homepage{www.kevinschmidiger.me}
 %\extrainfo{informacion adicional}
 \photo[64pt][0.4pt]{picture}
 %\quote{Die aktuelle Version meines Lebenslauf auf \href{https://github.com/kschmidi/cv}{\textbf{Github}}}
@@ -45,7 +48,7 @@
 {\hfill\bfseries Rapperswil}
 {\newline{}\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
 {\hfill\textit{Note: -}}
-{Vollzeit (voraussichtlich)}
+{Vollzeit vermischt mit Teilzeit am Schluss}
 
 \cventry{2012--2013}
 {Berufsmaturit"at (Technische Richtung)}
@@ -65,9 +68,14 @@
 % Second 2
 % ------------------------------------------------------------------------------------------------------------
 \section{Erfahrungen}
-\cventry{Fertigstellung: Sommer 2016}
+\cventry{2016-217}
+{Praktikum - \href{https://www.avaloq.ch/}{Avaloq AG}}{}
+{\newline{}6 Monatiges Praktikum. Mitarbeit im  agilen Team der Tools Innovation (Eclipse Plug-ins). Kleinere Bugfixes und Features, sowie testing.}{}
+{\href{https://www.avaloq.ch/}{Avaloq AG} \hfill Zu"rich}
+
+\cventry{2016}
 {\href{http://sinv-56012.edu.hsr.ch/ccglator}{Bachelorarbeit -} \href{https://www.youtube.com/watch?v=CeNdN5KlPGc}{Plug-in f"ur} \href{https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md}{C++ Core Guideline unterst"uztung}}{}
-{\newline{}Einhaltung der Rules: C.ctor: Constructors, assignments, and destructors mithilfe von Codeanalyse und Refactoring}{\hfill \textbf{Note: -}}
+{\newline{}Einhaltung der Rules: C.ctor: Constructors, assignments, and destructors mithilfe von Codeanalyse und Refactoring}{\hfill \textbf{Note: 5.5}}
 {IFS Institut f"ur Software \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
 
 \cventry{2015}

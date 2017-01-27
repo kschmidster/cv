@@ -1,0 +1,130 @@
+% Copyright 2015 by Kevin Schmidiger
+% mix of classic and bank style of https://www.sharelatex.com/templates/cv-or-resume
+% !TEX program = pdflatex
+
+\documentclass[11pt,legalpaper,sans]{moderncv}   
+% ('10pt', '11pt' and '12pt'), ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' or 'landscape') , ('sans' or 'roman')
+
+% ModernCV Themes
+\usepackage{../moderncvstylemyclassic}
+%\moderncvstyle{myclassic}                        % 'casual' (default),'classic', 'oldstyle' or 'banking'
+\moderncvcolor{blue}                          % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
+%\nopagenumbers{}
+
+% ajustes para los margenes de pagina
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}
+
+\usepackage[utf8]{inputenc}					% Added so I can use special letters like an "Ö"
+\usepackage{german}
+
+\setlength{\headheight}{0pt}
+\setlength{\textheight}{850pt}					% To add more text in one page
+
+% Personal data
+\name{Kevin}{Schmidiger}
+\title{Curriculum Vitae}
+\address{Arbentalstrasse 317, 8045 Z"urich}
+\phone[mobile]{+41 79 269 82 25}
+%\phone[fixed]{+41 44 341 98 27}
+%\phone[fax]{+3~(456)~789~012}
+\email{schmidiger.kevin@hotmail.com}
+%\homepage{www.kevinschmidiger.me}
+%\extrainfo{informacion adicional}
+\photo[64pt][0.4pt]{../picture}
+%\quote{Die aktuelle Version meines Lebenslauf auf \href{https://github.com/kschmidi/cv}{\textbf{Github}}}
+%\quote{The only thing that interferes with my learning is my education. - Albert Einstein}
+\social[github]{kschmidi}
+
+\begin{document}
+
+\makecvtitle
+
+% ------------------------------------------------------------------------------------------------------------
+% Section 1
+% ------------------------------------------------------------------------------------------------------------
+\section{Education}
+\cventry{2013--today}
+{Bachelor of Science FHO in Computer Science}
+{\hfill\bfseries Rapperswil}
+{\newline{}\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+{\hfill\textit{Grade: -}}
+{Fulltime and parttime at the end}
+
+\cventry{2012--2013}
+{Professional Maturity Certificate}
+{\hfill\bfseries Winterthur}
+{\newline{}\href{http://www.bbw.ch/}{BBW Berufsbildungsschule Winterthur}}
+{\hfill\textit{Grade: 4.8}}
+{Fulltime}
+
+\cventry{2007--2011}
+{Apprenticeship Electrician EFZ}
+{\hfill\bfseries Z"urich}
+{\newline{}\href{htttp://www.tbz.ch/}{TBZ Technische Berufsschule Z"urich}}
+{\hfill\textit{Grade: 5.0}}
+{Apprenticeship}
+
+% ------------------------------------------------------------------------------------------------------------
+% Second 2
+% ------------------------------------------------------------------------------------------------------------
+\section{Work Experience}
+\cventry{2016-217}
+{Praktikum - \href{https://www.avaloq.ch/}{Avaloq AG}}{}
+{\newline{}6 month internship. Working in an agile Team in Tools Innovation (Eclipse Plug-ins). Small Bugfixes and Features, as well as testing.}{}
+{\href{https://www.avaloq.ch/}{Avaloq AG} \hfill Zu"rich}
+
+\cventry{Finish: Summer 2016}
+{\href{http://sinv-56012.edu.hsr.ch/ccglator}{Bachelor Thesis -} \href{https://www.youtube.com/watch?v=CeNdN5KlPGc}{Plug-in for} \href{https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md}{C++ Core Guideline IDE support}}{}
+{\newline{}Checking violations of the Rules: C.ctor: Constructors, assignments, and destructors with help of  code analysis and refactoring}{\hfill \textbf{Grade: -}}
+{IFS Institut f"ur Software \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+
+\cventry{2015}
+{\href{https://eprints.hsr.ch/479/1/aliextor.pdf}{\textbf{Term Project -}} \href{https://www.youtube.com/watch?v=QNrb_LbuYmI}{Plug-in} for C++(1y) Refactoring (Type Alias Extraction)}{}
+{\newline{}Gaining knowledge in Plug-in developement, CDT, Codan etc.}{\hfill \textbf{Grade: 5.5}}
+{IFS Institut f"ur Software \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+
+\cventry{2015}
+{Coach at \href{http://appquest.hsr.ch/}{AppQuest} 2015}{}
+{\newline{}Support Teams during 12 Weeks}{}
+{AppQuest \hfill\href{http://www.hsr.ch/}{HSR Hochschule f"ur Technik Rapperswil}}
+
+% ------------------------------------------------------------------------------------------------------------
+% Section 3
+% ------------------------------------------------------------------------------------------------------------
+\section{Technologies}
+%\subsection{Sehr gute Kenntnisse}
+\cventry{\bfseries +++}{Java, C/C++11, C\#, MacOSX, Linux, Android, Jenkins, Git, \LaTeX}
+{}{}{}{}
+%\subsection{Gute Kenntnisse}
+\cventry{\bfseries ++}{}{}{Bash, Assembler, JavaScript, SQL, iOS, HTML, CSS, Play, JSF, Maven, ANTLR, PostgreSQL}{}{}
+%\subsection{Grundkenntnisse}
+\cventry{\bfseries +}{}{}{Compiler, Swift, PHP, Haskell, Bootstrap, Spring, Windows Azure, Docker, AngularJS, Oracle, MySQL}{}{}
+
+% ------------------------------------------------------------------------------------------------------------
+% Section 4
+% ------------------------------------------------------------------------------------------------------------
+\section{Languagues}
+%\subsection{Sehr gute Kenntnisse}
+\cventry{\bfseries +++}{German, \textnormal{English}}
+{}{}{}{}
+%\subsection{Grundkenntnisse}
+\cventry{\bfseries +}{French}
+{}{}{}{}
+
+% ------------------------------------------------------------------------------------------------------------
+% Section 5
+% ------------------------------------------------------------------------------------------------------------
+\section{Free Time}
+\subsection{Interests}
+\cventry{}{Icehockey \textnormal{(NLA/NHL)}, Astronomy, \textnormal{Gen. understanding of Physics and Math}, Programming Languages \textnormal{(Compilers)}, Electrotechnic \textnormal{(programming of hardware)}, \textnormal{In general} Technology}
+{}{}{}{}
+\subsection{Hobbies}
+\cventry{}{Reading, play the Guitar, Sports}
+{}{}{}{}
+
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications} 
+
+\end{document}
